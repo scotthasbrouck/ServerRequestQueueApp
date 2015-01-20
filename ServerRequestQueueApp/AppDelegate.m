@@ -17,6 +17,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // add a test request, these should be saved for the subsquent launches of the app
+    //sample server request
+    ServerRequest *singleSampleRequest = [[ServerRequest alloc] init];
+    singleSampleRequest.tag = @"sample";
+    
+    singleSampleRequest.postData = [NSDictionary dictionaryWithObjectsAndKeys:
+                                    @"Sarah", @"fname",
+                                    @"Jane", @"lname",
+                                    @"59857355", @"fb_id",
+                                    nil];
+    
+    
+    //enqueue the first sample request
+    [[NSMutableArray sharedQueue] enqueue:singleSampleRequest];
+    
+    //note about how I tested this
+    NSLog(@"Everytime the app is opened, a new request is added to the queue.\nThus, the request count will increment by 1 on every launch");
+    NSLog(@"----------------------");
+    NSLog(@"Request count: %lu", [[NSMutableArray sharedQueue] queueSize]);
+    
     return YES;
 }
 
@@ -28,6 +49,9 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    //  save the queue here
+    NSLog([NSMutableArray saveQueueState] ? @"Saved state" : @"Failed to save state");
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -40,6 +64,9 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    //  save the queue here
+    NSLog([NSMutableArray saveQueueState] ? @"Saved state" : @"Failed to save state");
 }
 
 @end

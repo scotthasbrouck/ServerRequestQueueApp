@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ServerRequest.h"
+#import "ServerRequestQueue.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

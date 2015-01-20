@@ -14,6 +14,8 @@
 		D2F727D61A65CA96005D072F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F727D51A65CA96005D072F /* Images.xcassets */; };
 		D2F727D91A65CA96005D072F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F727D71A65CA96005D072F /* LaunchScreen.xib */; };
 		D2F727E51A65CA96005D072F /* ServerRequestQueueAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F727E41A65CA96005D072F /* ServerRequestQueueAppTests.m */; };
+		D2F727F31A65CABA005D072F /* ServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F727F01A65CABA005D072F /* ServerRequest.m */; };
+		D2F727F41A65CABA005D072F /* ServerRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F727F21A65CABA005D072F /* ServerRequestQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		D2F727DE1A65CA96005D072F /* ServerRequestQueueAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServerRequestQueueAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F727E31A65CA96005D072F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F727E41A65CA96005D072F /* ServerRequestQueueAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerRequestQueueAppTests.m; sourceTree = "<group>"; };
+		D2F727EF1A65CABA005D072F /* ServerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerRequest.h; sourceTree = "<group>"; };
+		D2F727F01A65CABA005D072F /* ServerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerRequest.m; sourceTree = "<group>"; };
+		D2F727F11A65CABA005D072F /* ServerRequestQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerRequestQueue.h; sourceTree = "<group>"; };
+		D2F727F21A65CABA005D072F /* ServerRequestQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerRequestQueue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		D2F727C71A65CA96005D072F /* ServerRequestQueueApp */ = {
 			isa = PBXGroup;
 			children = (
+				D2F727EE1A65CA9B005D072F /* ServerRequest */,
 				D2F727CC1A65CA96005D072F /* AppDelegate.h */,
 				D2F727CD1A65CA96005D072F /* AppDelegate.m */,
 				D2F727CF1A65CA96005D072F /* ViewController.h */,
@@ -117,6 +124,17 @@
 				D2F727E31A65CA96005D072F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2F727EE1A65CA9B005D072F /* ServerRequest */ = {
+			isa = PBXGroup;
+			children = (
+				D2F727EF1A65CABA005D072F /* ServerRequest.h */,
+				D2F727F01A65CABA005D072F /* ServerRequest.m */,
+				D2F727F11A65CABA005D072F /* ServerRequestQueue.h */,
+				D2F727F21A65CABA005D072F /* ServerRequestQueue.m */,
+			);
+			name = ServerRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +239,9 @@
 			files = (
 				D2F727D11A65CA96005D072F /* ViewController.m in Sources */,
 				D2F727CE1A65CA96005D072F /* AppDelegate.m in Sources */,
+				D2F727F31A65CABA005D072F /* ServerRequest.m in Sources */,
 				D2F727CB1A65CA96005D072F /* main.m in Sources */,
+				D2F727F41A65CABA005D072F /* ServerRequestQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
